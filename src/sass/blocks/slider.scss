@@ -1,0 +1,90 @@
+.slider {
+  margin-bottom: 71px
+}
+
+.slider__title {
+  width: 280px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  @include font-params("Roboto", 28px, 700, $black);
+}
+
+.slider__slides {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+}
+
+.slider__slide {
+  width: 280px;
+  list-style-type: none;
+  background-color: $gray;
+  border-radius: 5px;
+}
+
+.slider__link {
+  display: flex;
+  flex-flow: column;
+  margin: 31px 0;
+  padding: 0 29px;
+  text-decoration: none;
+  @include font-params("Roboto", 16px, 300, $black);
+}
+
+.slider__icon {
+  margin-bottom: 10px;
+}
+
+.slider__controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 48px;
+  margin: auto;
+}
+
+.slider__arrow {
+  height: 100%;
+  margin-bottom: -21px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &_right {
+    margin-left: 21px;
+  }
+
+  &_left {
+    margin-right: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__title {
+    width: 500px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 48px;
+    word-wrap: break-word;
+  }
+
+  .slider__slide {
+    width: 285px;
+    height: 140px;
+  }
+
+  .slider__link {
+    padding: 0 29px;
+    line-height: 1.6;
+  }
+}

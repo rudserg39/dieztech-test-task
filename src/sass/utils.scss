@@ -1,0 +1,17 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  width: $mobile-width;
+  margin: auto;
+  padding: 0 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+    margin: auto;
+    padding: 0 345px;
+  }
+}

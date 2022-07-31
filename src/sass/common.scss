@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+}

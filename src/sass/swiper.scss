@@ -1,0 +1,42 @@
+.swiper-slide {
+  min-height: 140px !important;
+}
+
+.swiper-bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border: 1px solid $black;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.swiper-bullet-active {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: $red;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+  position: static !important;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: space-around;
+  width: auto !important;
+}

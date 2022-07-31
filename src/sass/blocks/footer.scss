@@ -1,0 +1,40 @@
+.footer {
+  background-color: $gray-dark;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  padding: 23px 0;
+}
+
+.footer__text {
+  margin-top: 0;
+  @include font-params("Roboto", 14px, 300, $white);
+}
+
+.footer__info {
+  margin: 0;
+  @include font-params("Roboto", 14px, 300, $white);
+}
+
+.footer__link {
+  color: $white;
+  text-decoration: none;
+}
+
+@media (min-width: $desktop-width) {
+  .footer__wrapper {
+    flex-flow: row;
+  }
+
+  .footer__text {
+    margin-left: 32px;
+    margin-bottom: 0;
+  }
+
+  .footer__info {
+    margin-right: 173px;
+  }
+}

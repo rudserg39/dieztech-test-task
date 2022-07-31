@@ -1,0 +1,184 @@
+.header {
+  margin-bottom: 40px;
+}
+
+.header__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header__burger {
+  position: relative;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.header__burger_invisible {
+  display: none;
+}
+
+.header__burger-line {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $black;
+
+  &_first {
+    top: 0;
+  }
+
+  &_second,
+  &_third {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &_fourth {
+    bottom: 0;
+  }
+}
+
+.header__burger_active .header__burger-line_first,
+.header__burger_active .header__burger-line_fourth {
+  opacity: 0;
+}
+
+.header__burger_active .header__burger-line_second {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.header__burger_active .header__burger-line_third {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.header__nav_close {
+  height: 0;
+  opacity: 0;
+}
+
+.header__nav_open {
+  min-height: 160px;
+  opacity: 1;
+}
+
+.header__nav-list {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header__nav-item {
+  padding: 10px 0;
+  list-style-type: none;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $black;
+  }
+}
+
+.header__nav-link {
+  @include font-params("Roboto", 16px, 400, $black);
+  text-decoration: none;
+
+  &_active {
+    color: $red;
+  }
+}
+
+.header__buttons {
+  margin-top: 10px;
+}
+
+.header__useful-button {
+  width: 280px;
+  height: 50px;
+  @include font-params("Roboto", 14px, 500, $white);
+  background-color: $red;
+}
+
+.header__usefult-button-wrapper {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__accaunt-button {
+  width: 280px;
+  margin-top: 10px;
+  height: 50px;
+  @include font-params("Roboto", 14px, 500, $black-light);
+  background-color: $white;
+  border: 1px solid $black-light;
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    margin-bottom: 12px;
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__inner-wrapper {
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    margin-left: 127px;
+
+    &_close {
+      height: auto;
+      opacity: 1;
+      transition: none;
+    }
+
+    &_open {
+      min-height: auto;
+    }
+  }
+
+  .header__nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 373px;
+    margin-top: 27px;
+  }
+
+  .header__nav-item:not(:last-child) {
+    border: none;
+  }
+
+  .header__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 373px;
+    margin-top: 8px
+  }
+
+  .header__useful-button {
+    width: 178px;
+    height: 50px;
+  }
+
+  .header__accaunt-button {
+    width: 174px;
+    height: 50px;
+    margin-top: 0;
+  }
+}
